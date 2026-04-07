@@ -124,7 +124,7 @@ gym-membership-retention/
 ## How to Run
 
 1. Clone this repository
-2. Download the base dataset from [Kaggle](https://www.kaggle.com/datasets/adrianvinueza/gym-customers-features-and-churn) (optional — notebook generates synthetic data by default)
+2. Download the base dataset from [Kaggle](https://www.kaggle.com/datasets/adrianvinueza/gym-customers-features-and-churn) (optional - notebook generates synthetic data by default)
 3. Open `gym_membership_retention.ipynb` in Jupyter or Google Colab
 4. Run all cells sequentially
 
