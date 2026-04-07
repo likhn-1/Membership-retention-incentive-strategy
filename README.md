@@ -1,14 +1,14 @@
 # Gym Membership Retention & Incentive Strategy Model
 
-> Churn prediction and risk segmentation for 25,000 gym members — with scenario analysis quantifying the ROI of targeted retention incentives.
+> Churn prediction and risk segmentation for 25,000 gym members with scenario analysis quantifying the ROI of targeted retention incentives.
 
 ---
 
 ## Project Overview
 
-Member churn is one of the most expensive problems a gym can face — acquiring a new member costs 5–7x more than retaining one. This project builds an end-to-end churn modeling pipeline that moves beyond simple rule-based segmentation to ML-driven risk cohorts, enabling smarter, tier-specific retention campaigns.
+Member churn is one of the most expensive problems a gym can face, acquiring a new member costs 5 - 7x more than retaining one. This project builds an end-to-end churn modeling pipeline that moves beyond simple rule-based segmentation to ML- driven risk cohorts, enabling smarter, tier-specific retention campaigns.
 
-**Why it's relevant beyond fitness:** The same methodology — behavioral feature engineering, risk segmentation, and intervention scenario modeling — applies directly to any subscription or recurring-revenue product (marketplaces, SaaS, support operations). The question "which users are about to disengage, and what's the cheapest intervention?" is universal.
+**Why it's relevant beyond fitness:** The same methodology - behavioral feature engineering, risk segmentation, and intervention scenario modeling. This applies directly to any subscription or recurring revenue product (marketplaces, SaaS, support operations). The question "which users are about to disengage, and what's the cheapest intervention?" is universal.
 
 ---
 
@@ -34,7 +34,7 @@ Raw features were augmented with four engineered signals designed to capture beh
 | `high_engagement` | Binary: engagement_score > 3 | Non-linear threshold effect |
 | `improving_attendance` | Binary: attendance_trend > 0 | Captures recovery signal |
 
-**SQL equivalent provided in notebook** — all feature engineering logic is documented as CTE-based SQL queries alongside the pandas implementation, reflecting a production-style pipeline where features are built upstream before model training.
+**SQL equivalent provided in notebook** - all feature engineering logic is documented as CTE-based SQL queries alongside the pandas implementation, reflecting a production-style pipeline where features are built upstream before model training.
 
 ---
 
@@ -69,7 +69,7 @@ Trained on full engineered feature set. Random forests capture the non-linear in
 
 ## Risk Segmentation
 
-Using RF churn probabilities, members are assigned to four actionable cohorts. Segmentation accuracy is measured against a naive baseline (attendance quartile splits) using within-segment churn variance — lower variance = purer, more actionable segments.
+Using RF churn probabilities, members are assigned to four actionable cohorts. Segmentation accuracy is measured against a naive baseline (attendance quartile splits) using within-segment churn variance - lower variance = purer, more actionable segments.
 
 | Segment | Members | Churn Rate | Action |
 |---|---|---|---|
